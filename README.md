@@ -6,8 +6,6 @@
 
 <p align="center"><i>Session 06h: Q&A Wednesday 24th June 11:00 - 12:00 (HST)</i></p>
 
-<p align="center"><i>See the live online presentation at: https://ahoarfrost.github.io/Goldschmidt2020/</i></p>
-
 # Can we capture the functional features underlying the vast diversity of the microbial world with deep learning?
 
 Microbial communities live in intricate interconnection with their environment, driving the regulation of biogeochemical cycles and the coevolution of the biosphere and geosphere. The vastness of microbial diversity can be overwhelming, and often inhibits development of accurate models of their complex functional outcomes. This is a particular shortcoming in environmental settings, from which samples of interest are relatively rare, and even more rarely are collected with corresponding geochemical data. 
