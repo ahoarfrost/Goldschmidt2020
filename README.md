@@ -6,13 +6,15 @@
 
 <p align="center"><i>Session 06h: Q&A Wednesday 24th June 11:00 - 12:00 (HST)</i></p>
 
+<p align="center"><i>See the live online presentation at: https://ahoarfrost.github.io/Goldschmidt2020/</i></p>
+
 # Can we capture the functional features underlying the vast diversity of the microbial world with deep learning?
 
 Microbial communities live in intricate interconnection with their environment, driving the regulation of biogeochemical cycles and the coevolution of the biosphere and geosphere. The vastness of microbial diversity can be overwhelming, and often inhibits development of accurate models of their complex functional outcomes. This is a particular shortcoming in environmental settings, from which samples of interest are relatively rare, and even more rarely are collected with corresponding geochemical data. 
 
 ## A deep transfer learning approach
 
-* We developed **LookingGlass** - a model of the 'universal language of life' from sequences across the tree of life. This model produces representations, or embeddings, of biological sequences that are ***functionally- and evolutionarily- relevant***.  
+* We developed **LookingGlass** - a model of the 'universal language of life' from sequences across the tree of life. This model is a 3-layer Long-Short Term Memory Network trained to predict the identity of a masked nucleotide from its DNA context. This model produces representations, or embeddings, of biological sequences that are ***functionally- and evolutionarily- relevant***.  
 
 * From this 'universal' model, we can build more accurate models with less data for downstream modeling tasks of interest - a principle called **transfer learning**. This is ideal for environmental applications, in which samples and the corresponding label of interest are expensive and time-consuming to acquire.    
 
@@ -26,7 +28,9 @@ Microbial communities live in intricate interconnection with their environment, 
 
 **Figure 1:** Similarity between model output embeddings of individual DNA reads is higher for homologous sequences than nonhomologous sequences (left, P<0.001). With no additional training, using an embedding similarity threshold alone, we can differentiate homologous from nonhomologous sequences with a maximum 80% accuracy (right).
 
-Additionally, fine tuning the original LookingGlass model to predict functional annotations of DNA reads results in a **functional classifier with 78% accuracy**. This functional model can classify reads belonging to one of 1274 functional annotations (as predicted by the *mifaser* functional annotation tool). 
+Additionally, fine tuning the original LookingGlass model to predict functional annotations of DNA reads results in a **functional classifier with 77% accuracy**. This functional model can classify reads belonging to one of 1274 functional annotations (as predicted by the *mifaser* functional annotation tool). 
+
+Together, the ability of LookingGlass to differentiate between functional annotation and homology among DNA sequences suggest the embeddings produced by the model are both functionally and evolutionarily relevant. Interestingly, embeddings are not correlated with overall sequence similarity (R<sup>2</sup>=0.02), so embeddings are capturing higher order functional and evolutionary features of biology rather than simply memorizing DNA sequences. 
 
 ## Sequence embeddings differentiate environmental context of microbial communities
 
@@ -34,4 +38,13 @@ Additionally, fine tuning the original LookingGlass model to predict functional 
 <img src="EnvBiomePCAplot.png" width="75%" /> 
 </p>
 
-**Figure 2:** PCA visualization of the LookingGlass embedding output for DNA sequences from the ten standard environmental packages (as defined by the MIxS sequencing metadata standards); embeddings of sequences from different environmental contexts are distinct from one another (Permanova P<10e-16)
+**Figure 2:** PCA visualization of the LookingGlass embedding output for DNA sequences from the ten standard environmental packages (as defined by the MIxS sequencing metadata standards); embeddings of sequences from different environmental contexts are distinct from one another (Permanova P<10<sup>-16</sup>)
+
+## Future directions - mining metagenomes for unannotated microbial dark matter 
+
+LookingGlass predicts function and captures homology among sequences, even when the sequence similarity between homologous sequences is low. It is thus likely that a downstream model can be fine-tuned to predict a function of interest, even if the sequence similarity among homologs is below the threshold of detection for state-of-the-art alignment tools. 
+
+Oxidoreductases (EC number 1.-.-.-) are an ancient group of proteins that are widely distributed across the tree of life, and thus are highly divergent such that the sequence similarity of functional homologs in distant branches of the tree of life have very low sequence similarity. Annotation of novel oxidoreductases in the environment can thus be difficult or impossible using traditional alignment tools, which cannot infer function at low sequence similarity. 
+
+We fine-tuned the LookingGlass model to identify oxidoreductase sequences. This fine-tuned "EC1 classifier" can recognize oxidoreductases from functional groups not yet seen in the training set with 88% accuracy, suggesting the EC1 classifier is a generally useful tool for identifying oxidoreductases from environmental samples, whether or not those sequences can be annotated by traditional approaches. Future work is focusing on applying this model to environmental metagenomes to direct gene-targeted assembly of novel oxidoreductase genes.
+
