@@ -1,4 +1,31 @@
-## Welcome to GitHub Pages
+<h1 align="center">The Universal Language of Life</h1>
+
+<h2 align="center">Leveraging Deep Transfer Learning to Model the Biogeosphere</h2>
+
+<p align="center"><b><i>Adrienne Hoarfrost and Yana Bromberg</i></b></p>
+
+<p align="center"><i>Session 06h: Q&A Wednesday 24th June 11:00 - 12:00 (HST)</i></p>
+
+# Can we capture the functional features underlying the vast diversity of the microbial world with deep learning?
+
+Microbial communities live in intricate interconnection with their environment, driving the regulation of biogeochemical cycles and the coevolution of the biosphere and geosphere. The vastness of microbial diversity can be overwhelming, and often inhibits development of accurate models of their complex functional outcomes. This is a particular shortcoming in environmental settings, from which samples of interest are relatively rare, and even more rarely are collected with corresponding geochemical data. 
+
+We set out to answer the question: **Can deep learning capture the functional features underlying microbial systems?**
+
+## A deep transfer learning approach
+
+* We developed **LookingGlass** - a model of the 'universal language of life' from sequences across the tree of life. This model produces representations, or embeddings, of biological sequences that are ***functionally- and evolutionarily- relevant***.  
+
+* From this 'universal' model, we can build more accurate models with less data for downstream modeling tasks of interest - a principle called **transfer learning**. This is ideal for environmental applications, in which samples and the corresponding label of interest are expensive and time-consuming to acquire.    
+
+
+# Sequence embeddings are functionally and evolutionarily relevant
+
+             |  
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)  |  ![](https://...Ocean.png)
+
+#### virtual 
 
 You can use the [editor on GitHub](https://github.com/ahoarfrost/Goldschmidt2020/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
