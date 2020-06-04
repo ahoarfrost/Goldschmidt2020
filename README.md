@@ -12,8 +12,6 @@
 
 Microbial communities live in intricate interconnection with their environment, driving the regulation of biogeochemical cycles and the coevolution of the biosphere and geosphere. The vastness of microbial diversity can be overwhelming, and often inhibits development of accurate models of their complex functional outcomes. This is a particular shortcoming in environmental settings, from which samples of interest are relatively rare, and even more rarely are collected with corresponding geochemical data. 
 
----
-
 ## A deep transfer learning approach
 
 * We developed **LookingGlass** - a model of the 'universal language of life' from sequences across the tree of life. This model is a 3-layer Long-Short Term Memory Network trained to predict the identity of a masked nucleotide from its DNA context. This model produces representations, or embeddings, of biological sequences that are ***functionally- and evolutionarily- relevant***.  
