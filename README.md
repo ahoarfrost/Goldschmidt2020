@@ -62,9 +62,9 @@ Future directions will focus on analysis of this "microbial dark matter":
 
 
 
-
+------------------------------------------
 Thank you to all the members of the ENIGMA NASA Astrobiology Institute and the Bromberg lab at Rutgers. 
 And to our funding sources:
 <p align="center">
-<img src="funding.png" width="90%" /> 
+<img src="funding.png" width="75%" /> 
 </p>
