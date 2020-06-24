@@ -32,7 +32,7 @@ Together, the ability of LookingGlass to differentiate between functional annota
 ## Sequence embeddings differentiate environmental context of microbial communities
 
 <p align="center">
-<img src="tsne_env_package.png" width="75%" /> 
+<img src="tsne_env_package.png" width="68%" /> 
 </p>
 
 **Figure 2:** t-SNE visualization of the LookingGlass embedding output for DNA sequences from the ten standard environmental packages (as defined by the MIxS sequencing metadata standards); embeddings of sequences from different environmental contexts are distinct from one another (Permanova P<10<sup>-16</sup>)
