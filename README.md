@@ -44,7 +44,7 @@ LookingGlass predicts function and captures homology among sequences, even when 
 Oxidoreductases (EC number 1.-.-.-) are an ancient group of proteins that are widely distributed across the tree of life, and thus are highly divergent such that functional homologs in distant branches of the tree of life can have very low sequence similarity. Annotation of novel oxidoreductases in the environment can thus be difficult or impossible using traditional alignment tools, which cannot infer function at low sequence similarity. 
 
 <p align="center">
-<img src="EC1_clas_results.png" width="50%" /> 
+<img src="EC1_clas_results.png" width="65%" /> 
 </p>
 
 **We fine-tuned the LookingGlass model to identify novel oxidoreductase sequences.** This fine-tuned "EC1 classifier" can recognize oxidoreductases from functional groups not yet seen in the training set with ***80% accuracy***, suggesting the EC1 classifier is a generally useful tool for identifying oxidoreductases from environmental samples, whether or not those sequences can be annotated by traditional approaches. If a higher classification threshold is chosen, novel oxidoreductases can be identified with up to ****99%**** precision (above). Future work is focusing on applying this model to environmental metagenomes to direct gene-targeted assembly of novel oxidoreductase genes.
@@ -52,7 +52,7 @@ Oxidoreductases (EC number 1.-.-.-) are an ancient group of proteins that are wi
 In a typical set of metagenomes from the DCM and mesopelagic depths in the South Pacific Gyre sampled as part of the TARA project, using a more "traditional" homology-based functional annotation tool (MIFASER), only 2% of reads can be annotated, and only 0.28-0.45% of reads are identified as oxidoreductases. Using our EC1 classifier, roughly 15-18% of sequences in the metagenome are identified as oxidoreductases (left vs right pie charts, below). A smaller but more precise subset can be identified using a higher-precision classification threshold (darker green triangles), that still exceed the capabilities of traditional functional annotation tools by 5-20x. 
 
 <p align="center">
-<img src="EC1_dark_matter.png" width="95%" /> 
+<img src="EC1_dark_matter.png" width="100%" /> 
 </p>
 
 Future directions will focus on analysis of this "microbial dark matter":
