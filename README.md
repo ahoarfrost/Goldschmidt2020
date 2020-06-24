@@ -20,11 +20,10 @@ Microbial communities live in intricate interconnection with their environment, 
 ## Sequence embeddings are functionally and evolutionarily relevant
 
 <p float="left">
-  <img src="homolog_boxplot.png" width="48%" />
-  <img src="homolog_metrics.png" width="48%" /> 
+  <img src="homolog_results.png" width="90%" />
 </p>
 
-**Figure 1:** Similarity between model output embeddings of individual DNA reads is higher for homologous sequences than nonhomologous sequences (left, P<0.001). With no additional training, using an embedding similarity threshold alone, we can differentiate homologous from nonhomologous sequences with a maximum 80% accuracy (right).
+**Figure 1:** Similarity between model output embeddings of individual DNA reads is higher for homologous sequences than nonhomologous sequences (left, P<0.001). With no additional training, using an embedding similarity threshold alone, we can differentiate homologous from nonhomologous sequences with a maximum 80% accuracy (right). In particular, embedding similarity remains high in homologous sequences even when sequence similarity is low (bottom) - a feature that is particularly useful for ancient, diverse homologous groups with low sequence similarity among homologs. 
 
 Additionally, fine tuning the original LookingGlass model to predict functional annotations of DNA reads results in a **functional classifier with 77% accuracy**. This functional model can classify reads belonging to one of 1274 functional annotations (as predicted by the *mifaser* functional annotation tool). 
 
