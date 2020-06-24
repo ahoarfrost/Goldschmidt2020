@@ -23,11 +23,11 @@ Microbial communities live in intricate interconnection with their environment, 
   <img src="homolog_results.png" width="90%" />
 </p>
 
-**Figure 1:** Similarity between model output embeddings of individual DNA reads is higher for homologous sequences than nonhomologous sequences (left, P<0.001). With no additional training, using an embedding similarity threshold alone, we can differentiate homologous from nonhomologous sequences with a maximum 80% accuracy (right). In particular, embedding similarity remains high in homologous sequences even when sequence similarity is low (bottom) - a feature that is particularly useful for ancient, diverse homologous groups with low sequence similarity among homologs. 
+**Figure 1:** Similarity between model output embeddings of individual DNA reads is higher for homologous sequences than nonhomologous sequences (left, P<0.001). With no additional training, using an embedding similarity threshold alone, we can differentiate homologous from nonhomologous sequences with a maximum 80% accuracy (right).
 
 Additionally, fine tuning the original LookingGlass model to predict functional annotations of DNA reads results in a **functional classifier with 77% accuracy**. This functional model can classify reads belonging to one of 1274 functional annotations (as predicted by the *mifaser* functional annotation tool). 
 
-Together, the ability of LookingGlass to differentiate between functional annotation and homology among DNA sequences suggest the embeddings produced by the model are both functionally and evolutionarily relevant. Interestingly, embeddings are not correlated with overall sequence similarity (R<sup>2</sup>=0.02), so embeddings are capturing higher order functional and evolutionary features of biology rather than simply memorizing DNA sequences. 
+Together, the ability of LookingGlass to differentiate between functional annotation and homology among DNA sequences suggest the embeddings produced by the model are both functionally and evolutionarily relevant. Interestingly, embeddings are not correlated with overall sequence similarity (R<sup>2</sup>=0.02, bottom), so embeddings are capturing higher order functional and evolutionary features of biology rather than simply memorizing DNA sequences. This feature is particularly valuable for ancient, diverse homologous groups with low sequence similarity among homologs.
 
 ## Sequence embeddings differentiate environmental context of microbial communities
 
